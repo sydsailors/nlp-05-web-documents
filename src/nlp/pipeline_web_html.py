@@ -42,17 +42,15 @@ Run from root project folder with:
 
 import logging
 
-from datafun_toolkit.logger import get_logger, log_header, log_path
+from datafun_toolkit.logger import get_logger, log_header
 
 from nlp.config_case import (
-    DATA_PATH,
     HTTP_REQUEST_HEADERS,
     PAGE_URL,
     PROCESSED_CSV_PATH,
     PROCESSED_PATH,
     RAW_HTML_PATH,
     RAW_PATH,
-    ROOT_PATH,
 )
 from nlp.stage01_extract import run_extract
 from nlp.stage02_validate_case import run_validate
@@ -78,10 +76,10 @@ def main() -> None:
     RAW_PATH.mkdir(parents=True, exist_ok=True)
     PROCESSED_PATH.mkdir(parents=True, exist_ok=True)
 
-    log_path(LOG, "ROOT_PATH", ROOT_PATH)
-    log_path(LOG, "DATA_PATH", DATA_PATH)
-    log_path(LOG, "RAW_PATH", RAW_PATH)
-    log_path(LOG, "PROCESSED_PATH", PROCESSED_PATH)
+    # log_path(LOG, "ROOT_PATH", ROOT_PATH)
+    # log_path(LOG, "DATA_PATH", DATA_PATH)
+    # log_path(LOG, "RAW_PATH", RAW_PATH)
+    # log_path(LOG, "PROCESSED_PATH", PROCESSED_PATH)
 
     # EXTRACT
     html_content = run_extract(

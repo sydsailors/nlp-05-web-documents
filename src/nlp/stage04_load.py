@@ -17,7 +17,7 @@ Notes
 import logging
 from pathlib import Path
 
-from datafun_toolkit.logger import log_path
+# from datafun_toolkit.logger import log_path
 import pandas as pd
 
 # ============================================================
@@ -48,4 +48,4 @@ def run_load(
 
     # Use the privacy-conscious
     # log_path function to log the sink path.
-    log_path(LOG, "SINK PATH", processed_csv_path)
+    # log_path(LOG, "SINK PATH", processed_csv_path)
