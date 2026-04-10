@@ -1,5 +1,5 @@
 """
-src/nlp/config_case.py - Module 5 Configuration
+src/nlp/config_sailors.py - Module 5 Configuration
 (COPY AND MODIFY THIS FILE - do not edit the original)
 
 Stores configuration values for the web document EVTL pipeline.
