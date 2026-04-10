@@ -1,5 +1,5 @@
 """
-src/nlp/stage02_validate_case.py - Validate Stage
+src/nlp/stage02_validate_sailors.py - Validate Stage
 (EDIT YOUR COPY OF THIS FILE)
 
 Source: Raw HTML string
@@ -82,38 +82,39 @@ def run_validate(
     # ============================================================
 
     # Check for expected structural elements
-    title = soup.find("h1", class_="title")
-    authors = soup.find("div", class_="authors")
-    abstract = soup.find("blockquote", class_="abstract")
-    subjects = soup.find("div", class_="subheader")
-    dateline = soup.find("div", class_="dateline")
 
-    LOG.info("VALIDATE: Title found: %s", title is not None)
-    LOG.info("VALIDATE: Authors found: %s", authors is not None)
-    LOG.info("VALIDATE: Abstract found: %s", abstract is not None)
-    LOG.info("VALIDATE: Subjects found: %s", subjects is not None)
-    LOG.info("VALIDATE: Dateline found: %s", dateline is not None)
+    title = soup.find("h1")
+    author = soup.find("h2")
+    chapter_divs = soup.find_all("div", class_="chapter")
+
+    LOG.info("VALIDATE: Title (h1) found: %s", title is not None)
+    LOG.info("VALIDATE: Author (h2) found: %s", author is not None)
+    LOG.info("VALIDATE: Chapter content found: %s", chapter_divs is not None)
+
+    paragraphs = []
+    for div in chapter_divs:
+        paragraphs.extend(div.find_all("p"))
+
+    LOG.info("VALIDATE: Chapter count: %d", len(chapter_divs))
+    LOG.info("VALIDATE: Total paragraph count: %d", len(paragraphs))
 
     missing = []
     if not title:
         missing.append("title")
-    if not authors:
-        missing.append("authors")
-    if not abstract:
-        missing.append("abstract")
-    if not subjects:
-        missing.append("subjects")
-    if not dateline:
-        missing.append("dateline")
+    if not author:
+        missing.append("author")
+    if not chapter_divs:
+        missing.append("chapter content")
+    if len(paragraphs) < 200:
+        missing.append("sufficient paragraph text")
 
     if missing:
         raise ValueError(
-            f"VALIDATE: Required elements missing: {missing}. "
+            f"VALIDATE: Required elements missing or insufficient: {missing}. "
             "Page structure may have changed."
         )
 
-    LOG.info("VALIDATE: HTML structure is valid.")
+    LOG.info("VALIDATE: HTML structure is valid for Project Gutenberg.")
     LOG.info("Sink: validated BeautifulSoup object")
 
-    # Return the validated BeautifulSoup object for use in the next stage.
     return soup

@@ -33,7 +33,7 @@ from pathlib import Path
 # API CONFIGURATION
 # ============================================================
 
-PAGE_URL: str = "https://arxiv.org/abs/2604.08442"
+PAGE_URL: str = "https://www.gutenberg.org/cache/epub/1513/pg1513-images.html"
 # arXiv abstract page — stable, scraping-friendly, academically relevant
 
 # Let them know who we are (and that we're doing educational web mining).
@@ -50,5 +50,5 @@ DATA_PATH: Path = ROOT_PATH / "data"
 RAW_PATH: Path = DATA_PATH / "raw"
 PROCESSED_PATH: Path = DATA_PATH / "processed"
 
-RAW_HTML_PATH: Path = RAW_PATH / "sailors_raw.html"
-PROCESSED_CSV_PATH: Path = PROCESSED_PATH / "sailors_processed.csv"
+RAW_HTML_PATH: Path = RAW_PATH / "gutenberg_raw.html"
+PROCESSED_CSV_PATH: Path = PROCESSED_PATH / "gutenberg_processed.csv"

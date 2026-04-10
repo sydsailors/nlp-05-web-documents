@@ -338,3 +338,82 @@
 2026-04-10 14:30:40 | INFO | CI | ========================
 2026-04-10 14:30:40 | INFO | CI | Pipeline executed successfully!
 2026-04-10 14:30:40 | INFO | CI | ========================
+2026-04-10 14:57:21 | INFO | CI | === RUN START ===
+2026-04-10 14:57:21 | INFO | CI | project=Module 5: EVTL PIPELINE - WEB DOCUMENTS (HTML)
+2026-04-10 14:57:21 | INFO | CI | repo_dir=nlp-05-web-documents
+2026-04-10 14:57:21 | INFO | CI | python=3.13.3
+2026-04-10 14:57:21 | INFO | CI | os=Darwin 20.6.0
+2026-04-10 14:57:21 | INFO | CI | shell=zsh
+2026-04-10 14:57:21 | INFO | CI | cwd=.
+2026-04-10 14:57:21 | INFO | CI | github_actions=False
+2026-04-10 14:57:21 | INFO | CI | START PIPELINE
+2026-04-10 14:57:21 | INFO | CI | ========================
+2026-04-10 14:57:21 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-10 14:57:21 | INFO | CI | ========================
+2026-04-10 14:57:21 | INFO | CI | EXTRACT: Fetching HTML from https://www.gutenberg.org/cache/epub/1513/pg1513-images.html
+2026-04-10 14:57:21 | INFO | CI | SOURCE URL = https://www.gutenberg.org/cache/epub/1513/pg1513-images.html
+2026-04-10 14:57:21 | INFO | CI | ========================
+2026-04-10 14:57:21 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-10 14:57:21 | INFO | CI | ========================
+2026-04-10 14:57:21 | INFO | CI | HTML STRUCTURE INSPECTION:
+2026-04-10 14:57:21 | INFO | CI | Top-level type: BeautifulSoup
+2026-04-10 14:57:21 | INFO | CI | Top-level elements: ['html']
+2026-04-10 14:57:21 | INFO | CI | VALIDATE: Title (h1) found: True
+2026-04-10 14:57:21 | INFO | CI | VALIDATE: Author (h2) found: True
+2026-04-10 14:57:21 | INFO | CI | VALIDATE: Chapter content found: True
+2026-04-10 14:57:21 | INFO | CI | VALIDATE: Paragraph count: 4
+2026-04-10 15:01:11 | INFO | CI | === RUN START ===
+2026-04-10 15:01:11 | INFO | CI | project=Module 5: EVTL PIPELINE - WEB DOCUMENTS (HTML)
+2026-04-10 15:01:11 | INFO | CI | repo_dir=nlp-05-web-documents
+2026-04-10 15:01:11 | INFO | CI | python=3.13.3
+2026-04-10 15:01:11 | INFO | CI | os=Darwin 20.6.0
+2026-04-10 15:01:11 | INFO | CI | shell=zsh
+2026-04-10 15:01:11 | INFO | CI | cwd=.
+2026-04-10 15:01:11 | INFO | CI | github_actions=False
+2026-04-10 15:01:11 | INFO | CI | START PIPELINE
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | EXTRACT: Fetching HTML from https://www.gutenberg.org/cache/epub/1513/pg1513-images.html
+2026-04-10 15:01:11 | INFO | CI | SOURCE URL = https://www.gutenberg.org/cache/epub/1513/pg1513-images.html
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | HTML STRUCTURE INSPECTION:
+2026-04-10 15:01:11 | INFO | CI | Top-level type: BeautifulSoup
+2026-04-10 15:01:11 | INFO | CI | Top-level elements: ['html']
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: Title (h1) found: True
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: Author (h2) found: True
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: Chapter content found: True
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: Chapter count: 7
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: Total paragraph count: 1057
+2026-04-10 15:01:11 | INFO | CI | VALIDATE: HTML structure is valid for Project Gutenberg.
+2026-04-10 15:01:11 | INFO | CI | Sink: validated BeautifulSoup object
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | Extracting literary metadata and text from HTML
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | STAGE 03a: Extract bibliographic fields
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | Extracted title: THE TRAGEDY OF ROMEO AND JULIET
+2026-04-10 15:01:11 | INFO | CI | Extracted author: The Project Gutenberg eBook ofRomeo and Juliet
+2026-04-10 15:01:11 | INFO | CI | Extracted paragraph count: 4
+2026-04-10 15:01:11 | INFO | CI | Extracted text length (chars): 877
+2026-04-10 15:01:11 | INFO | CI | Calculated word count: 117
+2026-04-10 15:01:11 | INFO | CI | Calculated avg words per paragraph: 29.25
+2026-04-10 15:01:11 | INFO | CI | Created DataFrame with 1 row and 6 columns
+2026-04-10 15:01:11 | INFO | CI | Columns: ['title', 'author', 'paragraph_count', 'word_count', 'avg_words_per_paragraph', 'text']
+2026-04-10 15:01:11 | INFO | CI | DataFrame preview:
+                             title  ...                                               text
+0  THE TRAGEDY OF ROMEO AND JULIET  ...  ESCALUS, Prince of Verona.MERCUTIO, kinsman to...
+
+[1 rows x 6 columns]
+2026-04-10 15:01:11 | INFO | CI | Sink: Pandas DataFrame created
+2026-04-10 15:01:11 | INFO | CI | Transformation complete.
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:11 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-10 15:01:11 | INFO | CI | ========================
+2026-04-10 15:01:12 | INFO | CI | ========================
+2026-04-10 15:01:12 | INFO | CI | Pipeline executed successfully!
+2026-04-10 15:01:12 | INFO | CI | ========================
